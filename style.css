@@ -39,10 +39,14 @@ footer {
   padding: 20px 0;
   font-size: 20px;
   margin-top: 25px;
+
 }
 
 body {
   background-color: #ddd;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
 }
 
 main {
