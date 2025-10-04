@@ -111,6 +111,16 @@ main {
     margin-bottom: 15px;
 }
 
+.menu-mobile {
+  display: none;
+}
+.header-mobile img{
+display: none
+}
+.menu-ativo {
+  display: block;
+}
+
 @media (max-width: 1000px) {
 
   main {
@@ -132,6 +142,9 @@ main {
   main {
     /* background-color: #ff0000; */
   }
+
+}
+
   @media (max-width: 600px) {
 
     main{
@@ -143,5 +156,8 @@ main {
       flex-direction: column;
       align-items: center;
     }
-  }
+
+    .header-mobile img{
+    display: block
 }
+  }

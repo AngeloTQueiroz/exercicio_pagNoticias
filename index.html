@@ -10,7 +10,23 @@
 </head>
 <body>
   <header>
+    <div class="header-mobile">
     <h1>Portal One Piece</h1>
+      <img class="icone-menu" src="imng/menu.png">
+    </div>
+
+    
+    <div class="menu-mobile">
+      <nav>
+        <a href="index.html">Inicío</a>
+        <a href="pagina-filmes.html">Filmes</a>
+        <a href="">Séries</a>
+        <a href="">Lançamentos</a>
+        <a href="">Contato</a>
+      </nav>
+    </div>
+
+
     <nav>
       <a href="">Inicío</a>
       <a href="personagens.html">Personagens</a>
@@ -58,5 +74,13 @@
     <p>&copy; 2025 Animes maneiros Desenvolvido por Angelo Teixeira.</p>
   </footer>
 </body>
+
+<script>
+  const iconeMenu = document.querySelector('.icone-menu');
+  const menuAtivo = document.querySelector('.menu-mobile');
+  iconeMenu.addEventListener('click', () => {
+    menuAtivo.classList.toggle('menu-ativo');
+  });
+</script>
 
 </html>
