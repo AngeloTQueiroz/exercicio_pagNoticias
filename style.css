@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -50,17 +51,21 @@ body {
 }
 
 main {
-  width: 1000px;
+  -webkit-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.3);  
+  box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.3);
+  width: 900px;
   background-color: white;
   text-align: center;
   margin: auto;
   padding: 30px;
   margin-top: 25px;
   border-radius: 10px;
+  flex: 1;
 }
 
 .noticia-principal img {
-  width: 520px;
+  width: 100%; /* Alterado para responsivo */
+  max-width: 520px; /* Largura máxima */
   border-radius: 10px;
 }
 
@@ -80,26 +85,63 @@ main {
 }
 .artigo img{
     border-radius: 10px;
-    width: 250px;
+    width: 95%;
     height: 150px;
     object-fit: cover;
 }
 .container{
-display: flex; /* or inline-flex */
-flex-direction: row;
-justify-content: space-between
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px; /* Espaço entre os artigos */
 
 }
 
 .artigo{
-    border-radius: 10px;
-    border-radius: 10px;
-    width: 250px;
-    background-color: rgba(118, 207, 207, 0.651);
-    padding: 20px 15px;
+  border-radius: 10px;
+  width: 250px;
+  background-color: rgba(118, 207, 207, 0.651);
+  padding: 20px 15px;
+  flex: 1; /* Faz os artigos se expandirem igualmente */
+    
 }
 
 .artigo h3{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+
+  main {
+    width: 80vw;
+    background-color: #000000;
+  }
+  
+  .container{
+    display: flex; /* or inline-flex */
+    
+    }
+
+
+
+}
+
+@media (max-width: 800px) {
+
+  main {
+    /* background-color: #ff0000; */
+  }
+  @media (max-width: 600px) {
+
+    main{
+     /* background-color: aqua; */
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
